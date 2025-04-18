@@ -21,5 +21,16 @@ namespace IVS_proj2
         {
 
         }
+
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Multiline = true;
+        }
     }
 }
