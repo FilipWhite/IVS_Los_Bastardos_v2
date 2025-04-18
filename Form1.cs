@@ -30,7 +30,7 @@ namespace IVS_proj2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Multiline = true;
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
