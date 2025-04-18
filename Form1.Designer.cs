@@ -322,6 +322,6 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
-    } //chaso karoso
+    } 
 }
 
