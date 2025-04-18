@@ -28,11 +28,15 @@ namespace IVS_proj2
 
         }
 
+        bool operation_button_clicked = false;
+        char operation = ' ';
+
         private void button_1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "1";
+                operation_button_clicked = false;
             }
             else
             {
@@ -41,9 +45,10 @@ namespace IVS_proj2
         }
         private void button_2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "2";
+                operation_button_clicked = false;
             }
             else
             {
@@ -52,9 +57,10 @@ namespace IVS_proj2
         }
         private void button_3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "3";
+                operation_button_clicked = false;
             }
             else
             {
@@ -63,9 +69,10 @@ namespace IVS_proj2
         }
         private void button_4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "4";
+                operation_button_clicked = false;
             }
             else
             {
@@ -74,9 +81,10 @@ namespace IVS_proj2
         }
         private void button_5_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "5";
+                operation_button_clicked = false;
             }
             else
             {
@@ -85,9 +93,10 @@ namespace IVS_proj2
         }
         private void button_6_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)   
             {
                 textBox1.Text = "6";
+                operation_button_clicked = false;
             }
             else
             {
@@ -97,9 +106,10 @@ namespace IVS_proj2
 
         private void button_7_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "7";
+                operation_button_clicked = false;
             }
             else
             {
@@ -109,9 +119,10 @@ namespace IVS_proj2
 
         private void button_8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "8";
+                operation_button_clicked = false;
             }
             else
             {
@@ -120,9 +131,10 @@ namespace IVS_proj2
         }
         private void button_9_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "9";
+                operation_button_clicked = false;
             }
             else
             {
@@ -132,9 +144,10 @@ namespace IVS_proj2
 
         private void button_0_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)   
             {
                 textBox1.Text = "0";
+                operation_button_clicked = false;
             }
             else
             {
@@ -144,9 +157,10 @@ namespace IVS_proj2
 
         private void button_00_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" && textBox1.Text != null)
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "00";
+                operation_button_clicked = false;
             }
             else
             {
@@ -167,19 +181,27 @@ namespace IVS_proj2
         }
         private void button_Add_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = textBox1.Text + "+";
+            operation_button_clicked = true;
+            operation = '+';
         }
         private void button_Substract_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = textBox1.Text + "-";
+            operation_button_clicked = true;
+            operation = '-';
         }
         private void button_Multiply_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = textBox1.Text + "*";
+            operation_button_clicked = true;
+            operation = '*';
         }
         private void button_Divide_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = textBox1.Text + "÷";
+            operation_button_clicked = true;
+            operation = '÷';
         }
         private void button_Factorial_Click(object sender, EventArgs e)
         {
@@ -193,17 +215,50 @@ namespace IVS_proj2
 
         private void button_Square_Root_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = "√" + "("+textBox1.Text+")";
+            double value = Convert.ToDouble(textBox1.Text);
+            double sq_ro_value = Math.Sqrt(value);
+            textBox1.Text = sq_ro_value.ToString();
         }
 
         private void button_Absolute_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = "|" + textBox1.Text + "|";
+            double value = Convert.ToDouble(textBox1.Text);
+            double abs_value = Math.Abs(value);
+            textBox1.Text = abs_value.ToString();
         }
 
         private void button_Result_Click(object sender, EventArgs e)
         {
-
+            string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+            double first_number = Convert.ToDouble(first_num);
+            double second_number = Convert.ToDouble(textBox1.Text);
+            if (operation == '+')
+            {
+                double result = first_number + second_number;
+                textBox1.Text = result.ToString();
+                textBox2.Text = first_number + "+" + second_number + "=";
+            }
+            else if (operation == '-')
+            {
+                double result = first_number - second_number;
+                textBox1.Text = result.ToString();
+                textBox2.Text = first_number + "-" + second_number + "=";
+            }
+            else if (operation == '*')
+            {
+                double result = first_number * second_number;
+                textBox1.Text = result.ToString();
+                textBox2.Text = first_number + "*" + second_number + "=";
+            }
+            else if (operation == '÷')
+            {
+                double result = first_number / second_number;
+                textBox1.Text = result.ToString();
+                textBox2.Text = first_number + "÷" + second_number + "=";
+            }
+            operation_button_clicked = true;
         }
 
         
