@@ -325,7 +325,22 @@ namespace IVS_proj2
         }
         private void button_Factorial_Click(object sender, EventArgs e)
         {
+            int number;
+            bool isValid = int.TryParse(textBox1.Text, out number);
 
+            if (!isValid || number < 0)
+            {
+                return;
+            }
+
+            long result = 1;
+            for (int i = 2; i <= number; i++)
+            {
+                result *= i;
+            }
+
+            textBox2.Text = number + "!";
+            textBox1.Text = result.ToString();
         }
 
         private void button_Power_Click(object sender, EventArgs e)
