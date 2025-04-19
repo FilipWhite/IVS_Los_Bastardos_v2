@@ -388,14 +388,12 @@ namespace IVS_proj2
             textBox2.Text = number + "!";
             textBox1.Text = result.ToString();
         }
-        bool PowerClickOn = false;
-        double powval1 = 0;
+
         private void button_Power_Click(object sender, EventArgs e)
         {
-            powval1 = Convert.ToDouble(textBox1.Text);
             textBox2.Text = textBox1.Text + "^";
-            textBox1.Clear();
-            PowerClickOn = true;
+            operation_button_clicked = true;
+            operation = '^';
         }
 
         private void button_Square_Root_Click(object sender, EventArgs e)
@@ -416,14 +414,17 @@ namespace IVS_proj2
 
         private void button_Result_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox2.Text) || textBox2.Text.Length < 2)
+            if (textBox2.Text.Length < 2)
             {
-                textBox2.Text = textBox1.Text + "=";
-                return;
+                textBox2.Text = textBox1.Text + "=";   
             }
-            string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
-            double first_number = Convert.ToDouble(first_num);
             double second_number = Convert.ToDouble(textBox1.Text);
+            double first_number = 0;
+            if (operation != '=')
+            {
+                string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+                first_number = Convert.ToDouble(first_num);
+            }
             if (operation == '+')
             {
                 double result = first_number + second_number;
@@ -448,14 +449,19 @@ namespace IVS_proj2
                 textBox1.Text = result.ToString();
                 textBox2.Text = first_number + "÷" + second_number + "=";
             }
-            else if (PowerClickOn == true)
+            else if (operation == '^')
             {
-                double powval2 = Convert.ToDouble(textBox1.Text);
-                double res = Math.Pow(powval1, powval2);
-                textBox1.Text = res.ToString();
-                textBox2.Text = powval1.ToString() + "^" + powval2.ToString() + "=";
+                double result = Math.Pow(first_number, second_number);
+                textBox1.Text = result.ToString();
+                textBox2.Text = first_number + "^" + second_number + "=";
+            }
+            else if (operation == '=')
+            {
+                textBox1.Text = second_number.ToString();
+                textBox2.Text = second_number + "=";
             }
             operation_button_clicked = true;
+            operation = '=';
         }
 
 
