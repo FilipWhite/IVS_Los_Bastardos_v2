@@ -419,8 +419,7 @@ namespace IVS_proj2
         {
             if(string.IsNullOrEmpty(textBox2.Text) || textBox2.Text.Length < 2)
             {
-                textBox2.Text = "";
-                textBox1.Text = "0";
+                textBox2.Text = textBox1.Text + "=";
                 return;
             }
             string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
