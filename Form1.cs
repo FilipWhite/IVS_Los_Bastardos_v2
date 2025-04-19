@@ -19,7 +19,11 @@ namespace IVS_proj2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
 
+            this.MinimumSize = new Size(350, 490);  
+            this.MaximumSize = new Size(350, 490);  
         }
 
 
@@ -449,9 +453,9 @@ namespace IVS_proj2
             }
                 operation_button_clicked = true;
         }
+        
 
-        
-        
+
 
     }
 }
