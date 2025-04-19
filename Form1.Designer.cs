@@ -39,7 +39,7 @@
             this.button_8 = new System.Windows.Forms.Button();
             this.button_9 = new System.Windows.Forms.Button();
             this.button_0 = new System.Windows.Forms.Button();
-            this.button_00 = new System.Windows.Forms.Button();
+            this.button_decimal = new System.Windows.Forms.Button();
             this.button_Clear = new System.Windows.Forms.Button();
             this.button_Clear_Entry = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
@@ -195,19 +195,19 @@
             this.button_0.UseVisualStyleBackColor = false;
             this.button_0.Click += new System.EventHandler(this.button_0_Click);
             // 
-            // button_00
+            // button_decimal
             // 
-            this.button_00.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_00.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button_00.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_00.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_00.Location = new System.Drawing.Point(86, 393);
-            this.button_00.Name = "button_00";
-            this.button_00.Size = new System.Drawing.Size(80, 55);
-            this.button_00.TabIndex = 20;
-            this.button_00.Text = ", ";
-            this.button_00.UseVisualStyleBackColor = false;
-            this.button_00.Click += new System.EventHandler(this.button_00_Click);
+            this.button_decimal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_decimal.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button_decimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_decimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_decimal.Location = new System.Drawing.Point(86, 393);
+            this.button_decimal.Name = "button_decimal";
+            this.button_decimal.Size = new System.Drawing.Size(80, 55);
+            this.button_decimal.TabIndex = 20;
+            this.button_decimal.Text = ",";
+            this.button_decimal.UseVisualStyleBackColor = false;
+            this.button_decimal.Click += new System.EventHandler(this.button_decimal_Click);
             // 
             // button_Clear
             // 
@@ -409,7 +409,7 @@
             this.Controls.Add(this.button_8);
             this.Controls.Add(this.button_9);
             this.Controls.Add(this.button_0);
-            this.Controls.Add(this.button_00);
+            this.Controls.Add(this.button_decimal);
             this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.button_Clear_Entry);
             this.Controls.Add(this.button_Add);
@@ -443,7 +443,7 @@
         private System.Windows.Forms.Button button_8;
         private System.Windows.Forms.Button button_9;
         private System.Windows.Forms.Button button_0;
-        private System.Windows.Forms.Button button_00;
+        private System.Windows.Forms.Button button_decimal;
         private System.Windows.Forms.Button button_Clear;
         private System.Windows.Forms.Button button_Clear_Entry;
         private System.Windows.Forms.Button button_Add;

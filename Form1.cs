@@ -158,7 +158,7 @@ namespace IVS_proj2
             }
         }
 
-        private void button_00_Click(object sender, EventArgs e)
+        private void button_decimal_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "0" || operation_button_clicked)
             {
@@ -463,9 +463,5 @@ namespace IVS_proj2
             operation_button_clicked = true;
             operation = '=';
         }
-
-
-
-
     }
 }
