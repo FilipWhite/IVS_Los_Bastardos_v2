@@ -402,7 +402,7 @@ namespace IVS_proj2
                 double powval2 = Convert.ToDouble(textBox1.Text);
                 double res = Math.Pow(powval1, powval2);
                 textBox1.Text = res.ToString();
-                textBox2.Text = powval1.ToString() + "^" + powval2.ToString();
+                textBox2.Text = powval1.ToString() + "^" + powval2.ToString() + "=";
             }
                 operation_button_clicked = true;
         }
