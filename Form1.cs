@@ -342,10 +342,14 @@ namespace IVS_proj2
             textBox2.Text = number + "!";
             textBox1.Text = result.ToString();
         }
-
+        bool PowerClickOn = false;
+        double powval1 = 0;
         private void button_Power_Click(object sender, EventArgs e)
         {
-
+            powval1 = Convert.ToDouble(textBox1.Text);
+            textBox2.Text = textBox1.Text + "^";
+            textBox1.Clear();
+            PowerClickOn = true;
         }
 
         private void button_Square_Root_Click(object sender, EventArgs e)
@@ -393,7 +397,14 @@ namespace IVS_proj2
                 textBox1.Text = result.ToString();
                 textBox2.Text = first_number + "÷" + second_number + "=";
             }
-            operation_button_clicked = true;
+            else if (PowerClickOn == true)
+            {
+                double powval2 = Convert.ToDouble(textBox1.Text);
+                double res = Math.Pow(powval1, powval2);
+                textBox1.Text = res.ToString();
+                textBox2.Text = powval1.ToString() + "^" + powval2.ToString();
+            }
+                operation_button_clicked = true;
         }
 
         
