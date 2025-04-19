@@ -181,11 +181,20 @@ namespace IVS_proj2
         }
         private void button_Add_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
+            {
+                textBox2.Text = textBox1.Text + "+";
+                operation = '+';  
+                operation_button_clicked = true;
+                return;  
+            }
+
             if (textBox2.Text.Length > 0)
             {
                 string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
                 double first_number = Convert.ToDouble(first_num);
                 double second_number = Convert.ToDouble(textBox1.Text);
+
                 if (operation == '+')
                 {
                     double result = first_number + second_number;
@@ -211,17 +220,27 @@ namespace IVS_proj2
                     textBox2.Text = textBox1.Text + "÷";
                 }
             }
+
             textBox2.Text = textBox1.Text + "+";
             operation_button_clicked = true;
-            operation = '+';
+            operation = '+';  
         }
         private void button_Substract_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
+            {
+                textBox2.Text = textBox1.Text + "-";
+                operation = '-';
+                operation_button_clicked = true;
+                return;
+            }
+
             if (textBox2.Text.Length > 0)
             {
                 string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
                 double first_number = Convert.ToDouble(first_num);
                 double second_number = Convert.ToDouble(textBox1.Text);
+
                 if (operation == '+')
                 {
                     double result = first_number + second_number;
@@ -247,17 +266,28 @@ namespace IVS_proj2
                     textBox2.Text = textBox1.Text + "÷";
                 }
             }
+
             textBox2.Text = textBox1.Text + "-";
             operation_button_clicked = true;
             operation = '-';
         }
+
         private void button_Multiply_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
+            {
+                textBox2.Text = textBox1.Text + "*";
+                operation = '*';
+                operation_button_clicked = true;
+                return;
+            }
+
             if (textBox2.Text.Length > 0)
             {
                 string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
                 double first_number = Convert.ToDouble(first_num);
                 double second_number = Convert.ToDouble(textBox1.Text);
+
                 if (operation == '+')
                 {
                     double result = first_number + second_number;
@@ -283,17 +313,28 @@ namespace IVS_proj2
                     textBox2.Text = textBox1.Text + "÷";
                 }
             }
+
             textBox2.Text = textBox1.Text + "*";
             operation_button_clicked = true;
             operation = '*';
         }
+
         private void button_Divide_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
+            {
+                textBox2.Text = textBox1.Text + "÷";
+                operation = '÷';  
+                operation_button_clicked = true;
+                return;  
+            }
+
             if (textBox2.Text.Length > 0)
             {
                 string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
                 double first_number = Convert.ToDouble(first_num);
                 double second_number = Convert.ToDouble(textBox1.Text);
+
                 if (operation == '+')
                 {
                     double result = first_number + second_number;
@@ -319,10 +360,12 @@ namespace IVS_proj2
                     textBox2.Text = textBox1.Text + "÷";
                 }
             }
+
             textBox2.Text = textBox1.Text + "÷";
             operation_button_clicked = true;
-            operation = '÷';
+            operation = '÷';  
         }
+
         private void button_Factorial_Click(object sender, EventArgs e)
         {
             int number;
