@@ -159,12 +159,12 @@ namespace IVS_proj2
         {
             if (textBox1.Text == "0" || operation_button_clicked)
             {
-                textBox1.Text = "00";
+                textBox1.Text = "0,";
                 operation_button_clicked = false;
             }
-            else
+            else if (!textBox1.Text.Contains(","))
             {
-                textBox1.Text = textBox1.Text + "00";
+                textBox1.Text = textBox1.Text + ",";
             }
         }
 

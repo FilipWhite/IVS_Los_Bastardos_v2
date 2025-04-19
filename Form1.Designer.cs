@@ -205,7 +205,7 @@
             this.button_00.Name = "button_00";
             this.button_00.Size = new System.Drawing.Size(80, 55);
             this.button_00.TabIndex = 20;
-            this.button_00.Text = "00 ";
+            this.button_00.Text = ", ";
             this.button_00.UseVisualStyleBackColor = false;
             this.button_00.Click += new System.EventHandler(this.button_00_Click);
             // 
