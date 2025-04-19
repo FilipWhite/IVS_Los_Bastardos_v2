@@ -413,6 +413,12 @@ namespace IVS_proj2
 
         private void button_Result_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(textBox2.Text) || textBox2.Text.Length < 2)
+            {
+                textBox2.Text = "";
+                textBox1.Text = "0";
+                return;
+            }
             string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
             double first_number = Convert.ToDouble(first_num);
             double second_number = Convert.ToDouble(textBox1.Text);
