@@ -19,13 +19,12 @@ namespace IVS_proj2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
 
-            this.MinimumSize = new Size(350, 490);  
-            this.MaximumSize = new Size(350, 490);  
+            this.MinimumSize = new Size(350, 490);
+            this.MaximumSize = new Size(350, 490);
         }
-
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -97,7 +96,7 @@ namespace IVS_proj2
         }
         private void button_6_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" || operation_button_clicked)   
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "6";
                 operation_button_clicked = false;
@@ -148,7 +147,7 @@ namespace IVS_proj2
 
         private void button_0_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0" || operation_button_clicked)   
+            if (textBox1.Text == "0" || operation_button_clicked)
             {
                 textBox1.Text = "0";
                 operation_button_clicked = false;
@@ -188,9 +187,9 @@ namespace IVS_proj2
             if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
             {
                 textBox2.Text = textBox1.Text + "+";
-                operation = '+';  
+                operation = '+';
                 operation_button_clicked = true;
-                return;  
+                return;
             }
 
             if (textBox2.Text.Length > 0)
@@ -227,7 +226,7 @@ namespace IVS_proj2
 
             textBox2.Text = textBox1.Text + "+";
             operation_button_clicked = true;
-            operation = '+';  
+            operation = '+';
         }
         private void button_Substract_Click(object sender, EventArgs e)
         {
@@ -328,9 +327,9 @@ namespace IVS_proj2
             if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
             {
                 textBox2.Text = textBox1.Text + "÷";
-                operation = '÷';  
+                operation = '÷';
                 operation_button_clicked = true;
-                return;  
+                return;
             }
 
             if (textBox2.Text.Length > 0)
@@ -367,7 +366,7 @@ namespace IVS_proj2
 
             textBox2.Text = textBox1.Text + "÷";
             operation_button_clicked = true;
-            operation = '÷';  
+            operation = '÷';
         }
 
         private void button_Factorial_Click(object sender, EventArgs e)
@@ -401,7 +400,7 @@ namespace IVS_proj2
 
         private void button_Square_Root_Click(object sender, EventArgs e)
         {
-            textBox2.Text = "√" + "("+textBox1.Text+")";
+            textBox2.Text = "√" + "(" + textBox1.Text + ")";
             double value = Convert.ToDouble(textBox1.Text);
             double sq_ro_value = Math.Sqrt(value);
             textBox1.Text = sq_ro_value.ToString();
@@ -417,7 +416,7 @@ namespace IVS_proj2
 
         private void button_Result_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(textBox2.Text) || textBox2.Text.Length < 2)
+            if (string.IsNullOrEmpty(textBox2.Text) || textBox2.Text.Length < 2)
             {
                 textBox2.Text = textBox1.Text + "=";
                 return;
@@ -456,9 +455,9 @@ namespace IVS_proj2
                 textBox1.Text = res.ToString();
                 textBox2.Text = powval1.ToString() + "^" + powval2.ToString() + "=";
             }
-                operation_button_clicked = true;
+            operation_button_clicked = true;
         }
-        
+
 
 
 
