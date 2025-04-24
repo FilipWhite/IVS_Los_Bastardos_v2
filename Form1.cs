@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace IVS_proj2
 {
+    
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -24,6 +26,8 @@ namespace IVS_proj2
 
             this.MinimumSize = new Size(350, 490);
             this.MaximumSize = new Size(350, 490);
+            
+
         }
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
@@ -33,6 +37,23 @@ namespace IVS_proj2
 
         bool operation_button_clicked = false;
         char operation = ' ';
+
+        private void DigitButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn == null) return;
+
+            if (textBox1.Text == "0" || operation_button_clicked)
+            {
+                textBox1.Text = btn.Text;
+                operation_button_clicked = false;
+            }
+            else
+            {
+                textBox1.Text += btn.Text;
+            }
+        }
+
 
         private void button_1_Click(object sender, EventArgs e)
         {
@@ -45,6 +66,7 @@ namespace IVS_proj2
             {
                 textBox1.Text = textBox1.Text + "1";
             }
+           
         }
         private void button_2_Click(object sender, EventArgs e)
         {
@@ -463,5 +485,84 @@ namespace IVS_proj2
             operation_button_clicked = true;
             operation = '=';
         }
-    }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0)
+                button_0_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1)
+                button_1_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D2 || e.KeyCode == Keys.NumPad2)
+                button_2_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3)
+                button_3_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D4 || e.KeyCode == Keys.NumPad4)
+                button_4_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D5 || e.KeyCode == Keys.NumPad5)
+                button_5_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D6 || e.KeyCode == Keys.NumPad6)
+                button_6_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D7 || e.KeyCode == Keys.NumPad7)
+                button_7_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D8 || e.KeyCode == Keys.NumPad8)
+                button_8_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.D9 || e.KeyCode == Keys.NumPad9)
+                button_9_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.Add || (e.Shift && e.KeyCode == Keys.Oemplus))
+                button_Add_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.Subtract || e.KeyCode == Keys.OemMinus)
+                button_Substract_Click(null, EventArgs.Empty);
+
+            /////////////NEFUNGUJE NASOBENI///////////////
+            else if (e.KeyCode == Keys.Multiply || (e.Shift && e.KeyCode == Keys.D8))
+                button_Multiply_Click(null, EventArgs.Empty); 
+
+
+            else if (e.KeyCode == Keys.Divide || e.KeyCode == Keys.OemQuestion || e.KeyCode == Keys.Oem5)
+                button_Divide_Click(null, EventArgs.Empty);
+
+
+            else if ((e.KeyCode == Keys.Oemplus && !e.Shift) || e.KeyCode == Keys.Enter)
+                button_Result_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.Back)
+                button_Clear_Entry_Click(null, EventArgs.Empty);
+
+
+            else if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.Oemcomma)
+                button_decimal_Click(null, EventArgs.Empty);
+
+
+        }
+
+    
+    
+    } 
+
+
+
 }
+           
