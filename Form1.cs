@@ -10,15 +10,23 @@ using System.Windows.Forms;
 
 namespace IVS_proj2
 {
-    
+    /// <summary>
+        /// Hlavní formulář kalkulačky
+        /// Obsahuje logiku pro zadávání čísel, provádění všech funkcí
+        /// </summary>
 
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Inicializace komponent formuláře
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Nastaví vlastnosti formuláře po načtení
+        /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -35,9 +43,22 @@ namespace IVS_proj2
 
         }
 
+        /// <summary>
+        /// Určuje, jestli bylo stisknuto tlačítko
+        /// </summary>
         bool operation_button_clicked = false;
+
+        /// <summary>
+        /// Aktuální operace
+        /// </summary>
         char operation = ' ';
 
+        /// <summary>
+        ///Má na starosti kliknutí na tlačítko čísla
+        ///Přidá číslo do textBox1
+        /// </summary>
+        /// <param name="tlačítko, které bylo stlačeno"></param>
+        /// <param name="Data o kliknutí na tlačítko"></param>
         private void DigitButton_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -54,7 +75,11 @@ namespace IVS_proj2
             }
         }
 
-
+        /// <summary>
+        /// tlačítko, které po stlačení přidá číslici "1" do textbox1
+        /// </summary>
+        /// <param name="tlačítko, které bylo stlačeno"></param>
+        /// <param name="Data o kliknutí na tlačítko"></param>
         private void button_1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "0" || operation_button_clicked)
@@ -193,6 +218,11 @@ namespace IVS_proj2
             }
         }
 
+        /// <summary>
+        /// tlačítko které vymaže výsledek a nastaví nulu do výpočtu
+        /// </summary>
+        /// <param name="stlačené tlačítko"></param>
+        /// <param name="Data o kliknutí na tlačítko"></param>
         private void button_Clear_Click(object sender, EventArgs e)
         {
 
@@ -204,6 +234,10 @@ namespace IVS_proj2
         {
             textBox1.Text = "0";
         }
+
+       /// <summary>
+       /// Nastaví operaci sčítání
+       /// </summary>
         private void button_Add_Click(object sender, EventArgs e)
         {
             if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
@@ -390,7 +424,11 @@ namespace IVS_proj2
             operation_button_clicked = true;
             operation = '÷';
         }
-
+        /// <summary>
+        /// Počítá faktoríál a výsledek zobrazuje na textoboxu 1
+        /// </summary>
+        /// <param name="tlačítko faktoriálu"></param>
+        /// <param name="Data o kliknutí na tlačítko"></param>
         private void button_Factorial_Click(object sender, EventArgs e)
         {
             int number;
@@ -433,7 +471,10 @@ namespace IVS_proj2
             double abs_value = Math.Abs(value);
             textBox1.Text = abs_value.ToString();
         }
-
+        /// <summary>
+        /// Vypočítá výsledek
+        /// </summary>
+       
         private void button_Result_Click(object sender, EventArgs e)
         {
             if (textBox2.Text.Length < 2)
@@ -486,6 +527,11 @@ namespace IVS_proj2
             operation = '=';
         }
 
+        /// <summary>
+        /// Metoda pro registraci vstupu pomocí klávesnice
+        /// </summary>
+        /// <param name="klávesnice"></param>
+        /// <param name="konkrétní klávesa"></param>
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0)
