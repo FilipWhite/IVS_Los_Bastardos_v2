@@ -250,8 +250,18 @@ namespace IVS_proj2
 
             if (textBox2.Text.Length > 0)
             {
-                string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
-                double first_number = Convert.ToDouble(first_num);
+                string first_num;
+                double first_number;
+                if (operation == 'a' || operation == '√')
+                {
+                    first_num = textBox1.Text.Substring(0, textBox1.Text.Length);
+                    first_number = Convert.ToDouble(first_num);
+                }
+                else
+                {
+                    first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+                    first_number = Convert.ToDouble(first_num);
+                }    
                 double second_number = Convert.ToDouble(textBox1.Text);
 
                 if (operation == '+')
@@ -296,10 +306,19 @@ namespace IVS_proj2
 
             if (textBox2.Text.Length > 0)
             {
-                string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
-                double first_number = Convert.ToDouble(first_num);
+                string first_num;
+                double first_number;
+                if (operation == 'a' || operation == '√')
+                {
+                    first_num = textBox1.Text.Substring(0, textBox1.Text.Length);
+                    first_number = Convert.ToDouble(first_num);
+                }
+                else
+                {
+                    first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+                    first_number = Convert.ToDouble(first_num);
+                }
                 double second_number = Convert.ToDouble(textBox1.Text);
-
                 if (operation == '+')
                 {
                     double result = first_number + second_number;
@@ -343,8 +362,18 @@ namespace IVS_proj2
 
             if (textBox2.Text.Length > 0)
             {
-                string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
-                double first_number = Convert.ToDouble(first_num);
+                string first_num;
+                double first_number;
+                if (operation == 'a' || operation == '√')
+                {
+                    first_num = textBox1.Text.Substring(0, textBox1.Text.Length);
+                    first_number = Convert.ToDouble(first_num);
+                }
+                else
+                {
+                    first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+                    first_number = Convert.ToDouble(first_num);
+                }
                 double second_number = Convert.ToDouble(textBox1.Text);
 
                 if (operation == '+')
@@ -390,8 +419,18 @@ namespace IVS_proj2
 
             if (textBox2.Text.Length > 0)
             {
-                string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
-                double first_number = Convert.ToDouble(first_num);
+                string first_num;
+                double first_number;
+                if (operation == 'a' || operation == '√')
+                {
+                    first_num = textBox1.Text.Substring(0, textBox1.Text.Length);
+                    first_number = Convert.ToDouble(first_num);
+                }
+                else
+                {
+                    first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+                    first_number = Convert.ToDouble(first_num);
+                }
                 double second_number = Convert.ToDouble(textBox1.Text);
 
                 if (operation == '+')
@@ -462,6 +501,8 @@ namespace IVS_proj2
             double value = Convert.ToDouble(textBox1.Text);
             double sq_ro_value = Math.Sqrt(value);
             textBox1.Text = sq_ro_value.ToString();
+            operation_button_clicked = true;
+            operation = '√';
         }
 
         private void button_Absolute_Click(object sender, EventArgs e)
@@ -470,6 +511,8 @@ namespace IVS_proj2
             double value = Convert.ToDouble(textBox1.Text);
             double abs_value = Math.Abs(value);
             textBox1.Text = abs_value.ToString();
+            operation_button_clicked = true;
+            operation = 'a';
         }
         /// <summary>
         /// Vypočítá výsledek
