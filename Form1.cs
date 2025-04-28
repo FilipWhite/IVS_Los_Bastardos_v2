@@ -548,7 +548,7 @@ namespace IVS_proj2
             double second_number = Convert.ToDouble(textBox1.Text);
             double first_number = 0;
             
-            if (operation == 'a' || operation == '√')
+            if ((operation == 'a' || operation == '√') && operation_basic != ' ')
             {
                 string first_num = textBox2.Text;
                 first_num = first_num.Replace("√", "").Replace("(", "").Replace(")", "").Replace("|", "");
@@ -556,6 +556,10 @@ namespace IVS_proj2
                 int indexOperator = first_num.IndexOfAny(operators);
                 string first_part = first_num.Substring(0, indexOperator);
                 first_number = Convert.ToDouble(first_part);
+            }
+            else if((operation == 'a' || operation == '√') && operation_basic == ' ')
+            {
+                textBox2.Text += "=";
             }
             else if (operation != '=')
             {
