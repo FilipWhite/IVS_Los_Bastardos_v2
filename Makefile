@@ -12,7 +12,7 @@ stddev:
 	@echo "Running standard deviation calculation" #potrebujem udelat ten profiling 
 
 clean:
-	@echo "Cleaning project files..."
+	@echo "Cleaning project files"
 	del /Q /F bin\Debug\*.exe bin\Debug\*.pdb bin\Debug\*.config
 
 pack:
