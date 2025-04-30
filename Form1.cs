@@ -8,13 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+///<listheader>Hlavní stránka</listheader>
+/// <summary>
+/// Hlavní formulář kalkulačky
+/// Obsahuje logiku pro zadávání čísel, provádění všech funkcí
+/// </summary>
+
+
+/** @author Filip Bilek
+ *  @author Alex Oľšavský
+ *  @author Martin Hora
+ *  @author Jaroslav Vančura
+ */
 namespace IVS_proj2
 {
-    /// <summary>
-        /// Hlavní formulář kalkulačky
-        /// Obsahuje logiku pro zadávání čísel, provádění všech funkcí
-        /// </summary>
 
+    
     public partial class Form1 : Form
     {
         /// <summary>
@@ -38,11 +47,7 @@ namespace IVS_proj2
 
         }
 
-        private void RichTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         /// <summary>
         /// Určuje, jestli bylo stisknuto tlačítko
         /// </summary>
@@ -242,7 +247,7 @@ namespace IVS_proj2
         {
             if (textBox2.Text.Length == 0 || textBox2.Text.Contains("="))
             {
-                textBox2.Text = textBox1.Text + "+";
+                textBox2.Text = textBox1.Text + "+"; 
                 operation = '+';
                 operation_button_clicked = true;
                 return;
@@ -529,7 +534,7 @@ namespace IVS_proj2
             if (operation != '=')
             {
                 string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
-                first_number = Convert.ToDouble(first_num);
+                first_number = Convert.ToDouble(first_num); ///ANI PIČU TO NENI FIXLE hahaha
             }
             if (operation == '+')
             {
@@ -646,9 +651,6 @@ namespace IVS_proj2
 
 
         }
-
-    
-    
     } 
 
 

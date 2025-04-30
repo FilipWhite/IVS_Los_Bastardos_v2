@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['dispose_0',['Dispose',['../class_i_v_s__proj2_1_1_form1.html#a0d918c80eca62a9f3470cd62d6b31bc5',1,'IVS_proj2::Form1']]]
+  ['button_5f0_5fclick_0',['button_0_Click',['../class_i_v_s__proj2_1_1_form1.html#a9f8f2d7342f1b6a454cd2e0c193eaa9f',1,'IVS_proj2::Form1']]],
+  ['button_5f1_5fclick_1',['button_1_Click',['../class_i_v_s__proj2_1_1_form1.html#adf01b2d51f9c59520881c35b1d376591',1,'IVS_proj2::Form1']]],
+  ['button_5f2_5fclick_2',['button_2_Click',['../class_i_v_s__proj2_1_1_form1.html#a3cfc3964e854cd4a02518e150847637b',1,'IVS_proj2::Form1']]],
+  ['button_5f3_5fclick_3',['button_3_Click',['../class_i_v_s__proj2_1_1_form1.html#a4093c1b22a228f9a76d7adf0c24aaff3',1,'IVS_proj2::Form1']]],
+  ['button_5f4_5fclick_4',['button_4_Click',['../class_i_v_s__proj2_1_1_form1.html#a3bebc9d68941bac4bf1f5251a9439598',1,'IVS_proj2::Form1']]],
+  ['button_5f5_5fclick_5',['button_5_Click',['../class_i_v_s__proj2_1_1_form1.html#a9082e3614907da6e2bcc6ee218f53314',1,'IVS_proj2::Form1']]],
+  ['button_5f6_5fclick_6',['button_6_Click',['../class_i_v_s__proj2_1_1_form1.html#a344251e7421d81c2042538c59b552ceb',1,'IVS_proj2::Form1']]],
+  ['button_5f7_5fclick_7',['button_7_Click',['../class_i_v_s__proj2_1_1_form1.html#a619a5e7940e02f60ffea943bdee72d50',1,'IVS_proj2::Form1']]],
+  ['button_5f8_5fclick_8',['button_8_Click',['../class_i_v_s__proj2_1_1_form1.html#aed397b31a90cb047827e2704951490ae',1,'IVS_proj2::Form1']]],
+  ['button_5f9_5fclick_9',['button_9_Click',['../class_i_v_s__proj2_1_1_form1.html#af3fc5ebc1e57680c6a304aa561601b78',1,'IVS_proj2::Form1']]],
+  ['button_5fabsolute_5fclick_10',['button_Absolute_Click',['../class_i_v_s__proj2_1_1_form1.html#a9d2f30943160fb075a581dfedc4e7495',1,'IVS_proj2::Form1']]],
+  ['button_5fadd_5fclick_11',['button_Add_Click',['../class_i_v_s__proj2_1_1_form1.html#ab98024a7fb5d5f3b484d81c9e71003b1',1,'IVS_proj2::Form1']]],
+  ['button_5fclear_5fclick_12',['button_Clear_Click',['../class_i_v_s__proj2_1_1_form1.html#abf2771c409323776fdf6597d221e1953',1,'IVS_proj2::Form1']]],
+  ['button_5fclear_5fentry_5fclick_13',['button_Clear_Entry_Click',['../class_i_v_s__proj2_1_1_form1.html#aa8b3db0b110eefaceb8604dfd672f554',1,'IVS_proj2::Form1']]],
+  ['button_5fdecimal_5fclick_14',['button_decimal_Click',['../class_i_v_s__proj2_1_1_form1.html#ad9b85ee609179f5d8a2cd3696cf17456',1,'IVS_proj2::Form1']]],
+  ['button_5fdivide_5fclick_15',['button_Divide_Click',['../class_i_v_s__proj2_1_1_form1.html#ac7268b4a87c8ec932ef7a7bdd5dc22ce',1,'IVS_proj2::Form1']]],
+  ['button_5ffactorial_5fclick_16',['button_Factorial_Click',['../class_i_v_s__proj2_1_1_form1.html#a282200cf90fcfd337067dbd462d5977e',1,'IVS_proj2::Form1']]],
+  ['button_5fmultiply_5fclick_17',['button_Multiply_Click',['../class_i_v_s__proj2_1_1_form1.html#ad375c0aa9d2ea9481d52a77474bd9546',1,'IVS_proj2::Form1']]],
+  ['button_5fpower_5fclick_18',['button_Power_Click',['../class_i_v_s__proj2_1_1_form1.html#a0fdb58040424aab6fe43adeddaeb8123',1,'IVS_proj2::Form1']]],
+  ['button_5fresult_5fclick_19',['button_Result_Click',['../class_i_v_s__proj2_1_1_form1.html#a10fff4e0c584ce36931c2abe01a633a0',1,'IVS_proj2::Form1']]],
+  ['button_5fsquare_5froot_5fclick_20',['button_Square_Root_Click',['../class_i_v_s__proj2_1_1_form1.html#a5bb751da2c8d1d0ce7e55b8de1dbeaa2',1,'IVS_proj2::Form1']]],
+  ['button_5fsubstract_5fclick_21',['button_Substract_Click',['../class_i_v_s__proj2_1_1_form1.html#a1417e9596611ed18cafe02d342295977',1,'IVS_proj2::Form1']]]
 ];
