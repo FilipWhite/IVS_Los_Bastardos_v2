@@ -1,0 +1,27 @@
+Termíny:
+
+24.4. 2025 naprogramovaná kalkulačka
+24.4  2025 GUI
+
+25.4. 2025 testy, instalátory
+
+26.4. 2025 dokumentace, manuál
+
+28.4. 2025 finální úpravy
+
+
+Úkoly budou směřovat na týmové úsilí a rozdělení je jen orientační
+xolsava00  (testy a základní mat. operace)
+xhorama00  (pokročilé mat. operace)
+xvancuj00  (profiling, instalátory)
+xbilekf00  (základ GUI, dokumentace, input klávesnice)
+
+
+
+
+kanál pro komunikaci: Discord - hlavní komunikace
+GitHub - sledování úkolů a pokroků projektu
+
+vyučující a cvičící mají udělený přístup přes github účet ivskontrola do IVS_Los_Bastardos_v2, což bude repozitář pro projekt.
+
+adresa repozitáře : https://github.com/FilipWhite/IVS_Los_Bastardos_v2.git
