@@ -14,11 +14,14 @@ GPLv3
 
 Autoři
 ------
--xbilekf00 
--xolsava00  
--xhorama00  
--xvancuj00  
- 
+
+- xbilekf00 Filip Bílek
+- xhorama00 Martin Hora
+- xvancuj00 Jaroslav Vančura
+- xolsava00 Alex Oľšavský
 
 Nazev týmu: Los Bastardos
+Licence
+-------
 
+GPL-3.0

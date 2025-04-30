@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,6 +58,8 @@ namespace IVS_proj2
         /// Aktuální operace
         /// </summary>
         char operation = ' ';
+
+        char operation_basic = ' ';
 
         /// <summary>
         ///Má na starosti kliknutí na tlačítko čísla
@@ -249,6 +252,7 @@ namespace IVS_proj2
             {
                 textBox2.Text = textBox1.Text + "+"; 
                 operation = '+';
+                operation_basic = '+';
                 operation_button_clicked = true;
                 return;
             }
@@ -305,6 +309,7 @@ namespace IVS_proj2
             {
                 textBox2.Text = textBox1.Text + "-";
                 operation = '-';
+                operation_basic = '-';
                 operation_button_clicked = true;
                 return;
             }
@@ -352,7 +357,7 @@ namespace IVS_proj2
 
             textBox2.Text = textBox1.Text + "-";
             operation_button_clicked = true;
-            operation = '-';
+            operation = '-'; 
         }
 
         private void button_Multiply_Click(object sender, EventArgs e)
@@ -361,6 +366,7 @@ namespace IVS_proj2
             {
                 textBox2.Text = textBox1.Text + "*";
                 operation = '*';
+                operation_basic = '*';
                 operation_button_clicked = true;
                 return;
             }
@@ -409,7 +415,7 @@ namespace IVS_proj2
 
             textBox2.Text = textBox1.Text + "*";
             operation_button_clicked = true;
-            operation = '*';
+            operation = '*';  
         }
 
         private void button_Divide_Click(object sender, EventArgs e)
@@ -418,6 +424,7 @@ namespace IVS_proj2
             {
                 textBox2.Text = textBox1.Text + "÷";
                 operation = '÷';
+                operation_basic = '÷';
                 operation_button_clicked = true;
                 return;
             }
@@ -502,7 +509,14 @@ namespace IVS_proj2
 
         private void button_Square_Root_Click(object sender, EventArgs e)
         {
-            textBox2.Text = "√" + "(" + textBox1.Text + ")";
+            if (operation == '=')
+            {
+                textBox2.Text = "√" + "(" + textBox1.Text + ")";
+            }
+            else
+            {
+                textBox2.Text += "√" + "(" + textBox1.Text + ")";
+            }   
             double value = Convert.ToDouble(textBox1.Text);
             double sq_ro_value = Math.Sqrt(value);
             textBox1.Text = sq_ro_value.ToString();
@@ -512,7 +526,14 @@ namespace IVS_proj2
 
         private void button_Absolute_Click(object sender, EventArgs e)
         {
-            textBox2.Text = "|" + textBox1.Text + "|";
+            if (operation == '=')
+            {
+                textBox2.Text =  "|" + textBox1.Text + "|";
+            }
+            else
+            {
+                textBox2.Text += "|" + textBox1.Text + "|"; ;
+            }
             double value = Convert.ToDouble(textBox1.Text);
             double abs_value = Math.Abs(value);
             textBox1.Text = abs_value.ToString();
@@ -531,30 +552,45 @@ namespace IVS_proj2
             }
             double second_number = Convert.ToDouble(textBox1.Text);
             double first_number = 0;
-            if (operation != '=')
+            
+            if ((operation == 'a' || operation == '√') && operation_basic != ' ')
+            {
+                string first_num = textBox2.Text;
+                first_num = first_num.Replace("√", "").Replace("(", "").Replace(")", "").Replace("|", "");
+                char[] operators = { '+', '-', '*', '÷' };
+                int indexOperator = first_num.IndexOfAny(operators);
+                string first_part = first_num.Substring(0, indexOperator);
+                first_number = Convert.ToDouble(first_part);
+            }
+            else if((operation == 'a' || operation == '√') && operation_basic == ' ')
+            {
+                textBox2.Text += "=";
+            }
+            else if (operation != '=')
             {
                 string first_num = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
                 first_number = Convert.ToDouble(first_num); ///ANI PIČU TO NENI FIXLE hahaha
             }
-            if (operation == '+')
+
+            if (operation == '+' || operation_basic == '+')
             {
                 double result = first_number + second_number;
                 textBox1.Text = result.ToString();
                 textBox2.Text = first_number + "+" + second_number + "=";
             }
-            else if (operation == '-')
+            else if (operation == '-' || operation_basic == '-')
             {
                 double result = first_number - second_number;
                 textBox1.Text = result.ToString();
                 textBox2.Text = first_number + "-" + second_number + "=";
             }
-            else if (operation == '*')
+            else if (operation == '*' || operation_basic == '*')
             {
                 double result = first_number * second_number;
                 textBox1.Text = result.ToString();
                 textBox2.Text = first_number + "*" + second_number + "=";
             }
-            else if (operation == '÷')
+            else if (operation == '÷' || operation_basic == '÷')
             {
                 double result = first_number / second_number;
                 textBox1.Text = result.ToString();
@@ -650,6 +686,26 @@ namespace IVS_proj2
                 button_decimal_Click(null, EventArgs.Empty);
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string instructions = "Instrukce:\n\n" +
+                          "• Tlačítka 0-9 zadávají čísla.\n" +
+                          "• Operace:\n" +
+                          "   + : Sčítání\n" +
+                          "   - : Odčítání\n" +
+                          "   * : Násobení\n" +
+                          "   / : Dělení\n" +
+                          "   ^ : Mocnina\n" +
+                          "   √ : Odmocnina\n" +
+                          "   ! : Faktorial\n" +
+                          "   abs : Absolutní hodnota\n\n" +
+                          "• '=' Výsledek.\n" +
+                          "• 'C' Vymazat vše\n" +
+                          "• 'CE' Vymazat zadané číslo.";
+
+            MessageBox.Show(instructions, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     } 
 
