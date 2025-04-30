@@ -21,6 +21,9 @@ pack:
 	@powershell -Command "Compress-Archive -Path * -DestinationPath IVS_proj2.zip"
 	@echo "Project successfully packed into IVS_proj2.zip"
 
+test:
+	@echo "Running unit tests using vstest.console.exe"
+	cd ../IVS_proj2.tests/bin/Debug/net472 && vstest.console.exe IVS_proj2.tests.dll
 
 help:
 	@echo "Help:"
@@ -29,4 +32,5 @@ help:
 	@echo "  make stddev   - runs the standard deviation calculation"
 	@echo "  make clean    - deletes bin/ and obj/ folders"
 	@echo "  make pack     - compresses the project into a ZIP archive"
+	@echo "  make test     - run tests"
 	@echo "  make help     - displays this help message"
