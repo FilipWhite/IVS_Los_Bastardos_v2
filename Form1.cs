@@ -688,7 +688,7 @@ namespace IVS_proj2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Hint_Click(object sender, EventArgs e)
         {
             string instructions = "Instrukce:\n\n" +
                           "• Tlačítka 0-9 zadávají čísla.\n" +
