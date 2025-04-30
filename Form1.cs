@@ -698,7 +698,7 @@ namespace IVS_proj2
                           "   abs : Absolutní hodnota\n\n" +
                           "• '=' Výsledek.\n" +
                           "• 'C' Vymazat vše\n" +
-                          "• 'CE' Vymazat poslední zadané číslo.";
+                          "• 'CE' Vymazat zadané číslo.";
 
             MessageBox.Show(instructions, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
