@@ -683,8 +683,25 @@ namespace IVS_proj2
 
         }
 
-    
-    
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string instructions = "Instrukce:\n\n" +
+                          "• Tlačítka 0-9 zadávají čísla.\n" +
+                          "• Operace:\n" +
+                          "   + : Sčítání\n" +
+                          "   - : Odčítání\n" +
+                          "   * : Násobení\n" +
+                          "   / : Dělení\n" +
+                          "   ^ : Mocnina\n" +
+                          "   √ : Odmocnina\n" +
+                          "   ! : Faktorial\n" +
+                          "   abs : Absolutní hodnota\n\n" +
+                          "• '=' Výsledek.\n" +
+                          "• 'C' Vymazat vše\n" +
+                          "• 'CE' Vymazat zadané číslo.";
+
+            MessageBox.Show(instructions, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     } 
 
 
