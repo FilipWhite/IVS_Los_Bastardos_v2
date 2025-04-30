@@ -1,0 +1,4 @@
+xbilekf00 100 (zakladni vzhled, koordinace tymu, dokumentace, input klavesnice, mockup)
+xolsava00 100 (upraveny vzhlad kalkulacky, funkcnost tlacidiel, zakladne mat. funkcie, kombinacia funkcii)
+xvancuj00 100 (instalátory, pokročilé mat. funkce)
+xhorama00 100 (pokročilé mat. funkce, makefile, testy)
